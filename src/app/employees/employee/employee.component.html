@@ -1,3 +1,33 @@
-<p>
-  employee works!
-</p>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" autocomplete="off">
+  <input [(ngModel)]="employeeService.employee.id" #id="ngModel" name="id" type="hidden">
+  <div class="form-group">
+    <label>Full name</label>
+    <input [(ngModel)]="employeeService.employee.fullName" #fullName="ngModel" name="fullName" type="text" class="form-control"
+      minlength="4" required>
+    <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="validation-error">
+      <div *ngIf="fullName.errors.required">
+        This field is required.
+      </div>
+      <div *ngIf="fullName.errors.minlength">
+        Name must be at least 4 characters long.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Position</label>
+    <input [(ngModel)]="employeeService.employee.position" #position="ngModel" name="position" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Employee Code</label>
+      <input [(ngModel)]="employeeService.employee.code" #code="ngModel" name="code" type="text" class="form-control">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Phone</label>
+      <input [(ngModel)]="employeeService.employee.phone" #phone="ngModel" name="phone" type="text" class="form-control">
+    </div>
+  </div>
+
+  <button [disabled]="form.invalid" type="submit" class="btn btn-lg btn-block">Submit</button>
+</form>
