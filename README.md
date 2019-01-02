@@ -1,6 +1,6 @@
 # EmployeesApp
 
-Angular tutorial from this [video](https://www.youtube.com/watch?v=jYvkMv7LzCw&t=3323s).
+Angular tutorial from this [video](https://www.youtube.com/watch?v=jYvkMv7LzCw).
 
 ## Development server
 
