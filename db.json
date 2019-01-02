@@ -1,0 +1,18 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "José De Ita",
+      "code": "JDI",
+      "phone": "5568163264",
+      "position": "Developer"
+    },
+    {
+      "fullName": "Manami Keel",
+      "code": "MK",
+      "phone": "6141385963",
+      "position": "Gamer",
+      "id": 2
+    }
+  ]
+}
